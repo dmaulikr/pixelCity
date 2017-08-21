@@ -54,6 +54,10 @@
 		89C8478F1F4AB33400CB2F15 /* pixelCity */ = {
 			isa = PBXGroup;
 			children = (
+				89C847A51F4AB3A300CB2F15 /* Utilities */,
+				89C847A41F4AB39C00CB2F15 /* Extensions */,
+				89C847A31F4AB38800CB2F15 /* View */,
+				89C847A21F4AB37700CB2F15 /* Controller */,
 				89C847901F4AB33400CB2F15 /* AppDelegate.swift */,
 				89C847921F4AB33400CB2F15 /* ViewController.swift */,
 				89C847941F4AB33400CB2F15 /* Main.storyboard */,
@@ -62,6 +66,34 @@
 				89C8479C1F4AB33400CB2F15 /* Info.plist */,
 			);
 			path = pixelCity;
+			sourceTree = "<group>";
+		};
+		89C847A21F4AB37700CB2F15 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89C847A31F4AB38800CB2F15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89C847A41F4AB39C00CB2F15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		89C847A51F4AB3A300CB2F15 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
