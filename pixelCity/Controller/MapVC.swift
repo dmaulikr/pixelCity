@@ -16,11 +16,13 @@ class MapVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
+    let authorizationStatus = CLLocationManager.authorizationStatus()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         locationManager.delegate = self
+        configureLocationServices()
     }
 
     
@@ -33,8 +35,24 @@ class MapVC: UIViewController {
 
 extension MapVC: MKMapViewDelegate {
     
+    
+    
+    
+    
 }
 
 extension MapVC: CLLocationManagerDelegate {
-    
+    func configureLocationServices() {
+        //check to see if app is authorized to grab, if not then request
+        
+        if authorizationStatus == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        } else {
+            return
+        }
+        
+        
+        
+        
+    }
 }
