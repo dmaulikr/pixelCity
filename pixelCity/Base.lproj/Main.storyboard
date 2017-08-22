@@ -22,52 +22,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2uz-wC-iVe">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X27-3v-2Zd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re2-CD-oBX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zof-8F-OPR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double tap to drop a pin and view photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39z-r7-IjQ">
-                                        <rect key="frame" x="21" y="25" width="333" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double tap to drop a pin and view photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpL-No-UlN">
+                                        <rect key="frame" x="23" y="22" width="329" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="333" id="5Pt-Iy-T5H"/>
-                                            <constraint firstAttribute="height" constant="21" id="OIm-1p-YuH"/>
+                                            <constraint firstAttribute="height" constant="21" id="gCA-VR-Dob"/>
+                                            <constraint firstAttribute="width" constant="329" id="xhZ-f7-8u2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="39z-r7-IjQ" firstAttribute="centerX" secondItem="re2-CD-oBX" secondAttribute="centerX" id="DgL-Ud-fea"/>
-                                    <constraint firstAttribute="height" constant="70" id="lUE-CS-yXQ"/>
-                                    <constraint firstItem="39z-r7-IjQ" firstAttribute="centerY" secondItem="re2-CD-oBX" secondAttribute="centerY" id="zj5-qL-sdF"/>
+                                    <constraint firstItem="CpL-No-UlN" firstAttribute="centerX" secondItem="zof-8F-OPR" secondAttribute="centerX" id="PML-sv-rF0"/>
+                                    <constraint firstItem="CpL-No-UlN" firstAttribute="top" secondItem="zof-8F-OPR" secondAttribute="top" constant="22" id="UtE-iZ-zhN"/>
+                                    <constraint firstItem="CpL-No-UlN" firstAttribute="centerY" secondItem="zof-8F-OPR" secondAttribute="centerY" id="aCa-1S-BiB"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9q-Gl-Y0f">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wi-xS-KDg">
                                 <rect key="frame" x="309" y="597" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="VAw-gY-tSC"/>
-                                    <constraint firstAttribute="height" constant="50" id="p9C-EF-2EQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="c7K-Gq-HTs"/>
+                                    <constraint firstAttribute="width" constant="50" id="na0-bZ-DtR"/>
                                 </constraints>
                                 <state key="normal" image="locationButton"/>
+                                <connections>
+                                    <action selector="centerMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aj-YV-VPs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="re2-CD-oBX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0cV-Xb-jcS"/>
-                            <constraint firstItem="2uz-wC-iVe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fkh-oD-oO9"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="C9q-Gl-Y0f" secondAttribute="bottom" constant="20" id="Foj-sF-Hhw"/>
-                            <constraint firstAttribute="trailing" secondItem="re2-CD-oBX" secondAttribute="trailing" id="GBI-kJ-dJ9"/>
-                            <constraint firstAttribute="trailing" secondItem="2uz-wC-iVe" secondAttribute="trailing" id="JdA-ol-qOb"/>
-                            <constraint firstAttribute="bottom" secondItem="2uz-wC-iVe" secondAttribute="bottom" id="NkH-2H-uym"/>
-                            <constraint firstItem="re2-CD-oBX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eZh-9t-6Qg"/>
-                            <constraint firstItem="2uz-wC-iVe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ox1-4c-MLm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="C9q-Gl-Y0f" secondAttribute="trailing" id="pd7-kc-rWF"/>
+                            <constraint firstItem="zof-8F-OPR" firstAttribute="leading" secondItem="X27-3v-2Zd" secondAttribute="leading" id="CxW-er-adi"/>
+                            <constraint firstAttribute="bottom" secondItem="X27-3v-2Zd" secondAttribute="bottom" id="ElC-lf-XwW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Wi-xS-KDg" secondAttribute="trailing" id="Ohy-uw-kj0"/>
+                            <constraint firstItem="zof-8F-OPR" firstAttribute="trailing" secondItem="X27-3v-2Zd" secondAttribute="trailing" id="X9X-Vb-lS7"/>
+                            <constraint firstAttribute="trailing" secondItem="X27-3v-2Zd" secondAttribute="trailing" id="aeK-xW-utE"/>
+                            <constraint firstItem="X27-3v-2Zd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hJ6-FA-FmG"/>
+                            <constraint firstItem="zof-8F-OPR" firstAttribute="top" secondItem="X27-3v-2Zd" secondAttribute="top" id="hOz-A4-ZcG"/>
+                            <constraint firstItem="X27-3v-2Zd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j8V-hm-XUx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3Wi-xS-KDg" secondAttribute="bottom" constant="20" id="kSZ-5d-FdK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="X27-3v-2Zd" id="jQ7-QO-i4s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
